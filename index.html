@@ -1,1 +1,117 @@
 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Formulario Interno de Cliente</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      padding: 2em;
+      max-width: 900px;
+      margin: auto;
+    }
+    h2 {
+      background-color: #333;
+      color: white;
+      padding: 10px;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      box-sizing: border-box;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #0077cc;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background: #005fa3;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Formulario Interno - Especificaciones del Cliente</h1>
+
+  <form>
+    <h2>Datos del Cliente</h2>
+    <label>Nombre de la Empresa:</label>
+    <input type="text" name="empresa">
+
+    <label>Número de Teléfono:</label>
+    <input type="tel" name="telefono">
+
+    <label>Número de Cliente:</label>
+    <input type="text" name="numero_cliente">
+
+    <label>Correo Electrónico:</label>
+    <input type="email" name="correo">
+
+    <label>Persona de Contacto:</label>
+    <input type="text" name="contacto">
+
+    <label>Horario de Apertura:</label>
+    <input type="text" name="horario">
+
+    <label>Observaciones:</label>
+    <textarea name="observaciones_cliente" rows="4"></textarea>
+
+    <h2>Datos Técnicos</h2>
+
+    <label>Google Gmail (Dirección):</label>
+    <input type="email" name="gmail_direccion">
+    <label>Google Gmail (Contraseña):</label>
+    <input type="password" name="gmail_contrasena">
+    <label>Google Gmail (API Key):</label>
+    <input type="text" name="gmail_api">
+
+    <label>Google Calendar (Dirección):</label>
+    <input type="text" name="calendar_direccion">
+    <label>Google Calendar (Contraseña):</label>
+    <input type="password" name="calendar_contrasena">
+    <label>Google Calendar (API Key):</label>
+    <input type="text" name="calendar_api">
+
+    <label>cal.com (Dirección):</label>
+    <input type="text" name="cal_direccion">
+    <label>cal.com (Contraseña):</label>
+    <input type="password" name="cal_contrasena">
+    <label>cal.com (API Key):</label>
+    <input type="text" name="cal_api">
+
+    <label>Operador Móvil (Número de Teléfono):</label>
+    <input type="tel" name="movil_telefono">
+    <label>Operador Móvil (SIP Trunk):</label>
+    <input type="text" name="movil_sip">
+    <label>Operador Móvil (Otros Parámetros):</label>
+    <textarea name="movil_parametros" rows="3"></textarea>
+
+    <label>Retell.ai (Nombre del Bot):</label>
+    <input type="text" name="retell_nombre">
+    <label>Retell.ai (API Key):</label>
+    <input type="text" name="retell_api">
+    <label>Retell.ai (Otros Parámetros):</label>
+    <textarea name="retell_parametros" rows="3"></textarea>
+
+    <label>Observaciones Finales:</label>
+    <textarea name="observaciones_finales" rows="4"></textarea>
+
+    <button type="submit">Guardar</button>
+  </form>
+
+</body>
+</html>
