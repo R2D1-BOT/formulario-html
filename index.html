@@ -7,7 +7,7 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f4f4f4;
+      background: #f2f2f2;
       padding: 2rem;
       max-width: 1200px;
       margin: auto;
@@ -17,11 +17,13 @@
       background-color: #333;
       color: white;
       padding: 10px;
+      margin-top: 40px;
     }
 
     form {
       display: flex;
       flex-direction: column;
+      gap: 2rem;
     }
 
     .grid-container {
@@ -33,7 +35,6 @@
     .form-group {
       display: flex;
       flex-direction: column;
-      margin-top: 10px;
     }
 
     label {
@@ -52,23 +53,32 @@
       resize: vertical;
     }
 
-    .full-width {
-      grid-column: 1 / -1;
+    .full {
+      grid-column: 1 / 3;
     }
 
     button {
-      margin-top: 30px;
-      padding: 12px 20px;
+      margin-top: 20px;
+      padding: 12px;
       background-color: #0077cc;
       color: white;
       border: none;
       font-size: 16px;
       cursor: pointer;
-      align-self: start;
+      width: fit-content;
     }
 
     button:hover {
       background-color: #005fa3;
+    }
+
+    @media (max-width: 768px) {
+      .grid-container {
+        grid-template-columns: 1fr;
+      }
+      .full {
+        grid-column: 1;
+      }
     }
   </style>
 </head>
@@ -103,13 +113,16 @@
         <label>Horario de Apertura:</label>
         <input type="text" name="horario" />
       </div>
-      <div class="form-group full-width">
+      <div class="form-group full">
         <label>Observaciones:</label>
         <textarea name="observaciones_cliente" rows="3"></textarea>
       </div>
     </div>
 
     <h2>Datos Técnicos</h2>
+
+    <!-- Sección Google Gmail -->
+    <h3>Google Gmail</h3>
     <div class="grid-container">
       <div class="form-group">
         <label>Google Gmail (Dirección):</label>
@@ -123,7 +136,11 @@
         <label>Google Gmail (API Key):</label>
         <input type="text" name="gmail_api" />
       </div>
+    </div>
 
+    <!-- Sección Google Calendar -->
+    <h3>Google Calendar</h3>
+    <div class="grid-container">
       <div class="form-group">
         <label>Google Calendar (Dirección):</label>
         <input type="text" name="calendar_direccion" />
@@ -136,7 +153,11 @@
         <label>Google Calendar (API Key):</label>
         <input type="text" name="calendar_api" />
       </div>
+    </div>
 
+    <!-- Sección cal.com -->
+    <h3>cal.com</h3>
+    <div class="grid-container">
       <div class="form-group">
         <label>cal.com (Dirección):</label>
         <input type="text" name="cal_direccion" />
@@ -149,7 +170,11 @@
         <label>cal.com (API Key):</label>
         <input type="text" name="cal_api" />
       </div>
+    </div>
 
+    <!-- Sección Operador Móvil -->
+    <h3>Operador Móvil</h3>
+    <div class="grid-container">
       <div class="form-group">
         <label>Operador Móvil (Número de Teléfono):</label>
         <input type="tel" name="movil_telefono" />
@@ -158,11 +183,15 @@
         <label>Operador Móvil (SIP Trunk):</label>
         <input type="text" name="movil_sip" />
       </div>
-      <div class="form-group full-width">
+      <div class="form-group full">
         <label>Operador Móvil (Otros Parámetros):</label>
         <textarea name="movil_parametros" rows="2"></textarea>
       </div>
+    </div>
 
+    <!-- Sección Retell.ai -->
+    <h3>Retell.ai</h3>
+    <div class="grid-container">
       <div class="form-group">
         <label>Retell.ai (Nombre del Bot):</label>
         <input type="text" name="retell_nombre" />
@@ -171,15 +200,15 @@
         <label>Retell.ai (API Key):</label>
         <input type="text" name="retell_api" />
       </div>
-      <div class="form-group full-width">
+      <div class="form-group full">
         <label>Retell.ai (Otros Parámetros):</label>
         <textarea name="retell_parametros" rows="2"></textarea>
       </div>
+    </div>
 
-      <div class="form-group full-width">
-        <label>Observaciones Finales:</label>
-        <textarea name="observaciones_finales" rows="3"></textarea>
-      </div>
+    <div class="form-group full">
+      <label>Observaciones Finales:</label>
+      <textarea name="observaciones_finales" rows="3"></textarea>
     </div>
 
     <button type="submit">Guardar</button>
