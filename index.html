@@ -28,7 +28,7 @@
 
     .grid-container {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: repeat(3, 1fr);
       gap: 20px;
     }
 
@@ -54,7 +54,7 @@
     }
 
     .full {
-      grid-column: 1 / 4;
+      grid-column: span 3;
     }
 
     button {
@@ -75,9 +75,6 @@
     @media (max-width: 768px) {
       .grid-container {
         grid-template-columns: 1fr;
-      }
-      .full {
-        grid-column: 1;
       }
     }
   </style>
@@ -125,15 +122,15 @@
     <h3>Google Gmail</h3>
     <div class="grid-container">
       <div class="form-group">
-        <label>Google Gmail (Dirección):</label>
+        <label>Dirección:</label>
         <input type="email" name="gmail_direccion" />
       </div>
       <div class="form-group">
-        <label>Google Gmail (Contraseña):</label>
+        <label>Contraseña:</label>
         <input type="password" name="gmail_contrasena" />
       </div>
       <div class="form-group">
-        <label>Google Gmail (API Key):</label>
+        <label>API Key:</label>
         <input type="text" name="gmail_api" />
       </div>
     </div>
@@ -142,15 +139,15 @@
     <h3>Google Calendar</h3>
     <div class="grid-container">
       <div class="form-group">
-        <label>Google Calendar (Dirección):</label>
+        <label>Dirección:</label>
         <input type="text" name="calendar_direccion" />
       </div>
       <div class="form-group">
-        <label>Google Calendar (Contraseña):</label>
+        <label>Contraseña:</label>
         <input type="password" name="calendar_contrasena" />
       </div>
       <div class="form-group">
-        <label>Google Calendar (API Key):</label>
+        <label>API Key:</label>
         <input type="text" name="calendar_api" />
       </div>
     </div>
@@ -159,15 +156,15 @@
     <h3>cal.com</h3>
     <div class="grid-container">
       <div class="form-group">
-        <label>cal.com (Dirección):</label>
+        <label>Dirección:</label>
         <input type="text" name="cal_direccion" />
       </div>
       <div class="form-group">
-        <label>cal.com (Contraseña):</label>
+        <label>Contraseña:</label>
         <input type="password" name="cal_contrasena" />
       </div>
       <div class="form-group">
-        <label>cal.com (API Key):</label>
+        <label>API Key:</label>
         <input type="text" name="cal_api" />
       </div>
     </div>
@@ -176,15 +173,15 @@
     <h3>Operador Móvil</h3>
     <div class="grid-container">
       <div class="form-group">
-        <label>Operador Móvil (Número de Teléfono):</label>
+        <label>Número de Teléfono:</label>
         <input type="tel" name="movil_telefono" />
       </div>
       <div class="form-group">
-        <label>Operador Móvil (SIP Trunk):</label>
+        <label>SIP Trunk:</label>
         <input type="text" name="movil_sip" />
       </div>
-      <div class="form-group full">
-        <label>Operador Móvil (Otros Parámetros):</label>
+      <div class="form-group">
+        <label>Otros Parámetros:</label>
         <textarea name="movil_parametros" rows="2"></textarea>
       </div>
     </div>
@@ -193,15 +190,15 @@
     <h3>Retell.ai</h3>
     <div class="grid-container">
       <div class="form-group">
-        <label>Retell.ai (Nombre del Bot):</label>
+        <label>Nombre del Bot:</label>
         <input type="text" name="retell_nombre" />
       </div>
       <div class="form-group">
-        <label>Retell.ai (API Key):</label>
+        <label>API Key:</label>
         <input type="text" name="retell_api" />
       </div>
-      <div class="form-group full">
-        <label>Retell.ai (Otros Parámetros):</label>
+      <div class="form-group">
+        <label>Otros Parámetros:</label>
         <textarea name="retell_parametros" rows="2"></textarea>
       </div>
     </div>
@@ -216,5 +213,3 @@
 
 </body>
 </html>
-
-
